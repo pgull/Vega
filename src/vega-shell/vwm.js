@@ -1,3 +1,7 @@
+//
+//     VEGA Window manager
+//
+
 var mainWindowPosition = $('window-frame.main window-frame-inner')[0].getBoundingClientRect();
 var frameLeft = mainWindowPosition['left']+1;
 var frameTop = mainWindowPosition['top']+29;
