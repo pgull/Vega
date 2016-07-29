@@ -1,0 +1,128 @@
+<html>
+  <head>
+    <link href="style/desktop.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+  </head>
+  <body>
+    <big-clock>00:00:00:00000</big-clock>
+    <main>
+    <sidebar>
+      <bar>
+        <bar-label><c>VEGA OS</c> ENV <y>0.0.1</y></bar-label><bar-label id="arch">error</bar-label>
+      </bar>
+      <window-frame>
+        <window-frame-inner>
+          <window-title>window title</window-title>
+        </window-frame-inner>
+      </window-frame>
+      <window-frame>
+        <window-frame-inner>
+          <window-title>window title</window-title>
+        </window-frame-inner>
+      </window-frame>
+      <bar class="bottom">
+        <bar-label id="hostname">Username@hostname</bar-label><bar-label id="time">00:00</bar-label><bar-label exec="xterm"><r>launch xterm</r></bar-label>
+      </bar>
+    </sidebar>
+
+    <workspace>
+      <bar>
+        <bar-label id="window-name">application name</bar-label>
+      </bar>
+      <window-frame class="main">
+        <window-frame-inner>
+          <window-title id="window-title">window title</window-title>
+        </window-frame-inner>
+      </window-frame>
+      <keyboard>
+        <kr>
+          <k>ESC</k>
+          <k>1</k>
+          <k>2</k>
+          <k>3</k>
+          <k>4</k>
+          <k>5</k>
+          <k>6</k>
+          <k>7</k>
+          <k>8</k>
+          <k>9</k>
+          <k>0</k>
+          <k>-</k>
+          <k>=</k>
+          <k>BACK</k>
+        </kr>
+        <br>
+        <kr>
+          <k>TAB</k>
+          <k>Q</k>
+          <k>W</k>
+          <k>E</k>
+          <k>R</k>
+          <k>T</k>
+          <k>Y</k>
+          <k>U</k>
+          <k>I</k>
+          <k>O</k>
+          <k>P</k>
+          <k>{</k>
+          <k>}</k>
+        </kr>
+        <br>
+        <kr>
+          <k>CAPS</k>
+          <k>A</k>
+          <k>S</k>
+          <k>D</k>
+          <k>F</k>
+          <k>G</k>
+          <k>H</k>
+          <k>J</k>
+          <k>K</k>
+          <k>L</k>
+          <k>;</k>
+          <k>ENTER</k>
+        </kr>
+        <br>
+        <kr>
+          <k>SHIFT</k>
+          <k>Z</k>
+          <k>X</k>
+          <k>C</k>
+          <k>V</k>
+          <k>B</k>
+          <k>N</k>
+          <k>M</k>
+          <k>,</k>
+          <k>.</k>
+          <k>/</k>
+          <k class="wide">SHIFT</k>
+        </kr>
+        <br>
+        <kr>
+          <spacebar></spacebar>
+        </kr>
+      </keyboard>
+      <bar class="bottom">
+        <bar-label>keyboard <c>en-us</c></bar-label>
+      </bar>
+    </workspace>
+  </main>
+    <!-- <img src="logo.png"></img> -->
+    <fingerprint>
+      <i class="material-icons">fingerprint</i>
+    </fingerprint>
+    <!-- load order -->
+    <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script src="js/desktop/keyboard.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.3/jquery-ui.min.js" integrity="sha256-xI/qyl9vpwWFOXz7+x/9WkG5j/SVnSw21viy8fWwbeE=" crossorigin="anonymous"></script>
+    <script src="js/lib/Vlib.js"></script>
+    <script>if (window.module) module = window.module;</script>
+    <script src="vega-wm.js"></script>
+    <script src="js/desktop/desktop.js"></script>
+    <script src="js/desktop/keyboard.js"></script>
+    <!-- end load -->
+  </body>
+</html>

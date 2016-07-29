@@ -1,0 +1,8 @@
+{
+  "name": "vega-shell",
+  "version": "0.0.1",
+  "main": "init.js",
+  "dependencies": {
+    "user-info": "^0.1.1"
+  }
+}

@@ -1,0 +1,195 @@
+<!doctype html>
+<html>
+  <head>
+    <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+    <link href="https://fonts.googleapis.com/css?family=Space+Mono:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style/main.css">
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script>if (window.module) module = window.module;</script>
+  </head>
+  <body>
+    <div id="widgetspace">
+      <div class="bar">
+        <div class="left">
+          <div class="barItem"><i class="material-icons">timeline</i><span class="label">STATUS</span></div>
+          <div class="barItem"><i class="material-icons">speaker_notes</i><span class="label"></span>NOTIFICATIONS</div>
+        </div>
+        <div class="right">
+          <div class="barItem">9:25 PM</div>
+        </div>
+      </div>
+    </div>
+    <div id="workspaceSidebar">
+      <div class="bar">
+        <div class="left">
+          <div class="barItem active"><i class="material-icons">close</i><i class="material-icons">folder</i>FILES</div>
+          <div class="barItem">FIREFOX</div>
+          <div class="barItem">TERMINAL</div>
+        </div>
+        <div class="right">
+          <div class="barControl"><i class="material-icons">add</i></div>
+        </div>
+      </div>
+    </div>
+    <div id="workspace">
+      <div class="bar">
+        <div class="barItem">FILE</div>
+        <div class="barItem">EDIT</div>
+        <div class="barItem">VIEW</div>
+        <div class="barItem">HELP</div>
+      </div>
+      <div id="keyboardActivator"class="bar">
+        <div class="left">
+          <div id="keyboardShow" class="barItem active"><i class="material-icons">keyboard</i> KEYBOARD </div>
+        </div>
+      </div>
+    </div>
+    <div id="keyboard">
+      <div id="unshifted">
+        <div class="keyboardRow">
+          <div class="k s">`</div>
+          <div class="k s">1</div>
+          <div class="k s">2</div>
+          <div class="k s">3</div>
+          <div class="k s">4</div>
+          <div class="k s">5</div>
+          <div class="k s">6</div>
+          <div class="k s">7</div>
+          <div class="k s">8</div>
+          <div class="k s">9</div>
+          <div class="k s">0</div>
+          <div class="k s">-</div>
+          <div class="k s">=</div>
+          <div class="k w2">BKSPC</div>
+        </div>
+        <div class="keyboardRow">
+          <div class="k w1">TAB</div>
+          <div class="k s">q</div>
+          <div class="k s">w</div>
+          <div class="k s">e</div>
+          <div class="k s">r</div>
+          <div class="k s">t</div>
+          <div class="k s">y</div>
+          <div class="k s">u</div>
+          <div class="k s">i</div>
+          <div class="k s">o</div>
+          <div class="k s">p</div>
+          <div class="k s">[</div>
+          <div class="k s">]</div>
+          <div class="k w1">\</div>
+        </div>
+        <div class="keyboardRow">
+          <div class="k w2">CAPS</div>
+          <div class="k s">a</div>
+          <div class="k s">s</div>
+          <div class="k s">d</div>
+          <div class="k s">f</div>
+          <div class="k s">g</div>
+          <div class="k s">h</div>
+          <div class="k s">j</div>
+          <div class="k s">k</div>
+          <div class="k s">l</div>
+          <div class="k s">;</div>
+          <div class="k s">'</div>
+          <div class="k w2">ENTER</div>
+        </div>
+        <div class="keyboardRow">
+          <div style="border-bottom: 2px solid transparent" class="k w3 shift">SHIFT</div>
+          <div class="k s">z</div>
+          <div class="k s">x</div>
+          <div class="k s">c</div>
+          <div class="k s">v</div>
+          <div class="k s">b</div>
+          <div class="k s">n</div>
+          <div class="k s">m</div>
+          <div class="k s">,</div>
+          <div class="k s">.</div>
+          <div class="k s">/</div>
+          <div style="border-bottom: 2px solid transparent" class="k w3 shift">SHIFT</div>
+        </div>
+        <div class="keyboardRow">
+          <div class="k w1">CTRL</div>
+          <div class="k s">ALT</div>
+          <div class="k sp">_</div>
+          <div class="k w1">SUP</div>
+          <div id="keyboardCollapse" class="k w1"><i class="material-icons">keyboard_hide</i></div>
+        </div>
+      </div>
+      <div id="shifted">
+        <div class="keyboardRow">
+          <div class="k s">~</div>
+          <div class="k s">!</div>
+          <div class="k s">@</div>
+          <div class="k s">#</div>
+          <div class="k s">$</div>
+          <div class="k s">%</div>
+          <div class="k s">^</div>
+          <div class="k s">&amp;</div>
+          <div class="k s">*</div>
+          <div class="k s">(</div>
+          <div class="k s">)</div>
+          <div class="k s">_</div>
+          <div class="k s">+</div>
+          <div class="k w2">BKSPC</div>
+        </div>
+        <div class="keyboardRow">
+          <div class="k w1">TAB</div>
+          <div class="k s">Q</div>
+          <div class="k s">W</div>
+          <div class="k s">E</div>
+          <div class="k s">R</div>
+          <div class="k s">T</div>
+          <div class="k s">Y</div>
+          <div class="k s">U</div>
+          <div class="k s">I</div>
+          <div class="k s">O</div>
+          <div class="k s">P</div>
+          <div class="k s">{</div>
+          <div class="k s">}</div>
+          <div class="k w1">|</div>
+        </div>
+        <div class="keyboardRow">
+          <div class="k w2">CAPS</div>
+          <div class="k s">A</div>
+          <div class="k s">S</div>
+          <div class="k s">D</div>
+          <div class="k s">F</div>
+          <div class="k s">G</div>
+          <div class="k s">H</div>
+          <div class="k s">J</div>
+          <div class="k s">K</div>
+          <div class="k s">L</div>
+          <div class="k s">:</div>
+          <div class="k s">"</div>
+          <div class="k w2">ENTER</div>
+        </div>
+        <div class="keyboardRow">
+          <div style="border-bottom: 2px solid #fff; border-radius: 0px"class="k w3 shift">SHIFT</div>
+          <div class="k s">Z</div>
+          <div class="k s">X</div>
+          <div class="k s">C</div>
+          <div class="k s">V</div>
+          <div class="k s">B</div>
+          <div class="k s">N</div>
+          <div class="k s">M</div>
+          <div class="k s"><</div>
+          <div class="k s">></div>
+          <div class="k s">?</div>
+          <div style="border-bottom: 2px solid #fff; border-radius: 0px"class="k w3 shift">SHIFT</div>
+        </div>
+        <div class="keyboardRow">
+          <div class="k w1">CTRL</div>
+          <div class="k s">ALT</div>
+          <div class="k sp">_</div>
+          <div class="k w1">SUP</div>
+          <div id="keyboardCollapse" class="k w1"><i class="material-icons">keyboard_hide</i></div>
+        </div>
+      </div>
+    </div>
+    <!-- load order -->
+    <script src="js/desktop/keyboard.js"></script>
+    <!-- end load -->
+  </body>
+</html>

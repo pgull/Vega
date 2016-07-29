@@ -1,0 +1,165 @@
+@keyframes fauxLoadText {
+    0%   {transform: scale(0.99); text-shadow: 5px 0px #f00; color: #00f; border: 0px;}
+    25%  {text-shadow: -5px 0p2 #0f0; color: #f00; left: 0px;}
+    50%  {text-shadow: 10px 0px #00f; color: #0f0; left: 0px;}
+    75%  {text-shadow: 2px 0px #e6fbff; color: #000; top: 0px;}
+    100% {color: #e6fbff;}
+}
+@keyframes fauxLoadBox {
+    0%   {-webkit-filter: drop-shadow(100px 0px #f00); border-color: #00f; left: -5px;}
+    25%  {-webkit-filter: drop-shadow(-100px 0px #0f0); border-color: #f00; left: 0px;}
+    50%  {-webkit-filter: drop-shadow(200px 0px #00f); border-color: #0f0; left: 0px;}
+    75%  {-webkit-filter: drop-shadow(100px 0px #e6fbff); border-color: #000; top: 0px;background-color: #000}
+    100% {}
+}
+:root {
+  -webkit-var-grey-dark: #122;
+  -webkit-var-white: #e6fbff;
+}
+*{
+  font-weight: bold;
+  color: #e6fbff;
+  cursor: default;;
+  -webkit-user-select: none;
+  font-family: 'Space Mono', monospace;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  background-color: #000;
+}
+
+#keyboard{
+  transition: bottom .5s cubic-bezier(1,0,0,1), -webkit-transform .5s cubic-bezier(1,0,0,1);
+  animation: fauxLoadBox .2s ease forwards;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: inline-block;
+  width: 1220px;
+}
+
+#workspace{
+  transition: height .5s cubic-bezier(1,0,0,1);
+  margin: 10px;
+  animation: fauxLoadBox .3s ease forwards;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1210px;
+  height: calc(100vh - 415px);
+}
+
+#widgetspace{
+  animation: fauxLoadBox .3s ease forwards;
+  position: absolute;
+  top: calc(100vh - 60px);
+  left: 0;
+  margin: 10px;
+  width: calc(100% - 1250px);
+  height: 100vh;
+}
+#workspaceSidebar{
+  animation: fauxLoadBox .3s ease forwards;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 10px;
+  width: calc(100% - 1250px);
+  height: 100vh;
+}
+
+.bar {
+  position: relative;
+  animation: fauxLoadBox .3s ease forwards;
+  border-top: 2px solid #e6fbff;
+  border-bottom: 2px solid #e6fbff;
+}
+.bar#keyboardActivator{
+  max-height: 34px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+.bar .right {
+  display: inline-block;
+  text-align: right;
+  float: right;
+  width: 50%;
+}
+.bar .left {
+  display: inline-block;
+  width: 50%;
+}
+
+.barItem{
+  display: inline-block;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 10px;
+  border-right: 1px solid #e6fbff;
+}
+.barControl{
+  display: inline-block;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left:10px;
+}
+
+.barItem i{
+  float: left;
+  margin-right: 5px;
+}
+
+.barItem.active{
+  border-bottom: 5px solid #e6fbff;
+  padding-bottom: 0px;
+}
+
+.k{
+  color: #000;
+  position: relative;
+  animation: fauxLoadText .2s ease forwards;
+  text-align: center;
+  box-sizing: border-box;
+  display: inline-block;
+  /*text-transform: uppercase;*/
+  padding: 17px;
+  margin: 8px;
+  border-radius: 5px;
+  background-color: transparent;
+}
+.keyboardRow{
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  /*border-bottom: 1px solid var(--grey-dark);*/
+}
+.k:active{
+  color: #000 !important;
+  background-color: #e6fbff;
+}
+.k.w1{
+  width: 80px;
+}
+.k.w2{
+  width: 120px;
+}
+.k.w3{
+  width: 180px;
+}
+.k.sp{
+  width: 600px;
+}
+.k.s{
+  width: 55px;
+}
+.k .material-icons {
+  color: inherit;
+}
+#keyboard #shifted {
+  display: none;
+}

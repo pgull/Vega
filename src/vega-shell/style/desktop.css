@@ -1,0 +1,219 @@
+/* ROOT
+white #f7fbfc
+brightBlue #97dde5
+medBlue #31505f
+darkBlue #1d3748
+cyan #20d6da
+orange/yellow #f1f348
+red #f34f47
+dark #05080d
+*/
+@keyframes fauxLoadText {
+    0%   {transform: scale(0.99); text-shadow: 5px 0px #f00; color: #00f; border: 0px;}
+    25%  {text-shadow: -5px 0p2 #0f0; color: #f00; left: 0px;}
+    50%  {text-shadow: 10px 0px #00f; color: #0f0; left: 0px;}
+    75%  {text-shadow: 2px 0px #e6fbff; color: #000; top: 0px;}
+    100% {color: #20d6da;}
+}
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900);
+*{
+  font-weight: bold;
+  cursor: default;
+  -webkit-user-select: none;
+  font-family: 'Space Mono', monospace;
+  color: #f7fbfc;
+}
+html, body{
+  height: 100vh;
+  overflow: hidden;
+  padding: 0;
+  margin: 0px;
+  background-color: #000;
+  /*background-color: #05080d;*/
+}
+body{
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+main{
+  background-color: #000;
+  transition: transform .5s ease, opacity .2s ease;
+  display: block;
+  box-sizing: border-box;
+  height: 100vh;
+  overflow: hidden;
+  border: 2px solid #97dde5;
+}
+workspace{
+  transition: transform .5s ease;
+  position: relative;
+  height: calc(100vh - 40px);
+  width: calc(60% - 40px);
+  display: inline-block;
+  float: left;
+  margin-left: 20px;
+  margin: 20px;
+}
+sidebar{
+  transition: transform .5s ease;
+  margin: 20px;
+  margin-right: 60px;
+  height: calc(100vh - 40px);
+  position: relative;
+  width: calc(30% - 40px);
+  display: inline-block;
+  float: left;
+}
+bar {
+  margin-bottom: 40px;
+  width: 100%;
+  text-transform: uppercase;
+  display: inline-block;
+  color: #f7fbfc;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  border-color: #1d3748;
+  padding-top: -top: 2px;
+  padding-bottom: -bottom: 2px;
+  font-size: 9pt;
+  font-weight: bold;
+}
+bar.bottom{
+  margin-bottom: 0px;
+  position: absolute;
+  bottom: 0;
+}
+bar-label{
+  display: inline-block;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding-right: 10px;
+  margin-right: 10px;
+  border-right: 2px solid #31505f;
+}
+y{
+  color: #f1f348;
+}
+r{
+  color: #f34f47;
+}
+c{
+  color: #20d6da;
+}
+window-frame{
+  transition: transform .3s ease, opacity .3s ease;
+  width: 100%;
+  position: relative;
+  height: 150px;
+  display: block;
+  padding: 5px;
+  border-radius: 5px;
+  border: 2px solid #31505f;
+  margin-bottom: 40px;
+  box-sizing: border-box;
+}
+window-frame:active{
+  border: 2px solid #97dde5;
+}
+window-frame-inner{
+  font-size: 9pt;
+  display: block;
+  border: 1px solid #31505f;
+  margin-bottom: 40px;
+  height: 100%;
+  box-sizing: border-box;
+}
+window-title{
+  text-transform: uppercase;
+  border-bottom: 1px solid #31505f;
+  padding: 5px;
+  display: block;
+}
+window-frame.main{
+  border: 2px solid #97dde5;
+  height: 500px;
+}
+keyboard{
+  height: 360px;
+  /*background-color: #05080d;*/
+  display: block;
+  margin-bottom: 40px;
+  box-sizing: border-box;
+}
+kr{
+  margin-bottom: 5px;
+  display: inline-block;
+  transform: translateX(-50%);
+  position: relative;
+  left: 50%;
+}
+k{
+  color: #20d6da;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  width: 70px;
+  display: inline-block;
+  border-radius: 5px;
+}
+k.wide{
+  width: 140px;
+  display: inline-block;
+}
+k:active{
+  color: #000;
+  background-color: #97dde5;
+}
+spacebar{
+  margin-top: 20px;
+  width: 650px;
+  padding: 18px;
+  box-sizing: border-box;
+  display: inline-block;
+  border-radius: 5px;
+  border: 2px solid #31505f;
+}
+spacebar:active{
+  background-color: #97dde5;
+}
+fingerprint{
+  position: absolute;
+  margin: 60px;
+  bottom: 0;
+  right: 0;
+}
+fingerprint i.material-icons{
+  color: #97dde5;
+  font-size: 45pt;
+}
+fingerprint:active i.material-icons{
+  color: #f1f348;
+}
+#hostname {
+  text-transform: none;
+}
+.ui-effects-transfer {
+  background-color: #000;
+  border: 2px solid #97dde5;
+  border-radius: 5px;
+}
+.ui-effects-transfer1 {
+  background-color: #000;
+  border: 2px solid #31505f;
+  border-radius: 5px;
+}
+big-clock{
+  transition: opacity 1s ease;
+  opacity: 0;
+  z-index: 0;
+  border: 2px solid #97dde5;
+  padding: 20px;
+  color: #97dde5;
+  font-weight: 100;
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  font-size: 20pt;
+}
