@@ -31,46 +31,6 @@ function getBigClock(){
 function getUptime(){
   return os.uptime();
 }
-
-$(document).on('click','window-frame',function(){
-  $(this).effect('pulsate',{ times: 1 },200,function(){
-    var speed = 300;
-    VHideAllWindows();
-    var switched = this;
-    $('window-frame.main').effect('transfer', { to: $(this), className: 'ui-effects-transfer1' }, speed );
-    $(this).effect('transfer', { to: $('window-frame.main') }, speed );
-    $('window-frame.main').css('opacity',0);
-    $(this).css('opacity',0);
-    setTimeout(function(){
-      VShowWindow(activeWindowID);
-      $('window-frame.main').css('opacity',1);
-      $(switched).css('opacity',1);
-    },speed);
-  });
-});
-
-function lockScreen(){
-  $('main').css({'transform':'scale(.95)','opacity':0});
-  $('window-frame').css({'transform':'scale(1.02)','opacity':0});
-  VHideAllWindows();
-  $('keyboard').hide('pulsate',{ times: 2 },200,function(){
-    $('bar').hide('pulsate',{ times: 2 },200,function(){
-        $('big-clock').css({'opacity':'1'});
-        displayLocked = true;
-    });
-  });
-}
-function unlockScreen(){
-  $('big-clock').css({'opacity':'0'});
-  $('main').css({'transform':'scale(1)','opacity':1});
-  $('bar').show('pulsate',{ times: 2 },200,function(){
-    $('keyboard').show('pulsate',{ times: 2 },200,function(){
-      $('window-frame').css({'transform':'scale(1)','opacity':1});
-      VShowWindow(activeWindowID);
-      displayLocked = false;
-  });
-    });
-}
 $('fingerprint').on('click',function(){
   if(displayLocked == false){
     lockScreen();

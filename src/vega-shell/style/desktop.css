@@ -15,6 +15,10 @@ dark #05080d
     75%  {text-shadow: 2px 0px #e6fbff; color: #000; top: 0px;}
     100% {color: #20d6da;}
 }
+@keyframes newWindow {
+  from{opacity: 0; transform: scale(0.5)}
+  to{opacity: 1; transform: scale(1)}
+}
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900);
 *{
   font-weight: bold;
@@ -101,7 +105,8 @@ c{
   color: #20d6da;
 }
 window-frame{
-  transition: transform .3s ease, opacity .3s ease;
+  animation: newWindow .3s ease;
+  transition: transform .3s ease, height .3s ease;
   width: 100%;
   position: relative;
   height: 150px;
@@ -129,7 +134,16 @@ window-title{
   padding: 5px;
   display: block;
 }
-window-frame.main{
+window-frame-main{
+  transition: transform .3s ease;
+  width: 100%;
+  position: relative;
+  height: 150px;
+  display: block;
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 40px;
+  box-sizing: border-box;
   border: 2px solid #97dde5;
   height: 500px;
 }

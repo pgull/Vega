@@ -12,18 +12,10 @@
       <bar>
         <bar-label><c>VEGA OS</c> ENV <y>0.0.1</y></bar-label><bar-label id="arch">error</bar-label>
       </bar>
-      <window-frame>
-        <window-frame-inner>
-          <window-title>window title</window-title>
-        </window-frame-inner>
-      </window-frame>
-      <window-frame>
-        <window-frame-inner>
-          <window-title>window title</window-title>
-        </window-frame-inner>
-      </window-frame>
+      <window-list>
+      </window-list>
       <bar class="bottom">
-        <bar-label id="hostname">Username@hostname</bar-label><bar-label id="time">00:00</bar-label><bar-label exec="xterm"><r>launch xterm</r></bar-label>
+        <bar-label id="hostname">Username@hostname</bar-label><bar-label id="time">00:00</bar-label><bar-label exec="xterm"><r>launch xterm</r></bar-label><bar-label exec="exit"><r>logout</r></bar-label>
       </bar>
     </sidebar>
 
@@ -31,11 +23,11 @@
       <bar>
         <bar-label id="window-name">application name</bar-label>
       </bar>
-      <window-frame class="main">
+      <window-frame-main>
         <window-frame-inner>
           <window-title id="window-title">window title</window-title>
         </window-frame-inner>
-      </window-frame>
+      </window-frame-main>
       <keyboard>
         <kr>
           <k>ESC</k><k>1</k><k>2</k><k>3</k><k>4</k><k>5</k><k>6</k><k>7</k><k>8</k><k>9</k><k>0</k><k>-</k><k>=</k><k>BACK</k>
@@ -73,7 +65,7 @@
     <script src="https://code.jquery.com/ui/1.11.3/jquery-ui.min.js" integrity="sha256-xI/qyl9vpwWFOXz7+x/9WkG5j/SVnSw21viy8fWwbeE=" crossorigin="anonymous"></script>
     <script src="js/lib/Vlib.js"></script>
     <script>if (window.module) module = window.module;</script>
-    <script src="vwm.js"></script>
+    <script src="vegawm.js"></script>
     <script src="js/desktop/desktop.js"></script>
     <script src="js/desktop/keyboard.js"></script>
     <!-- end load -->
